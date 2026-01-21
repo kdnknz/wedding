@@ -767,10 +767,9 @@ body {
 /* Greeting Section */
 .greeting-section {
   padding: 40px 20px;
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+  background: transparent;
   border-radius: 30px;
   margin: 40px 0;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
 .greeting-section h2 {
@@ -927,9 +926,10 @@ body {
   padding: 25px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
-  border-radius: 16px;
-  border: 1px solid rgba(197, 179, 150, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(197, 179, 150, 0.15);
 }
 
 .greetings-list::-webkit-scrollbar {
