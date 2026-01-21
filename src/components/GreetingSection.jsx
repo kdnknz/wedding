@@ -70,44 +70,46 @@ function GreetingSection() {
     <section className="greeting-section">
       <h2>Ucapan & Doa</h2>
       
-      <form className="greeting-form" onSubmit={handleSubmit}>
-        <div className="form-field">
-          <label className="form-label">Dari</label>
-          <input
-            type="text"
-            placeholder="Nama Anda"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            readOnly={isGuestFromUrl()}
-            required
-          />
-        </div>
-        <div className="form-field">
-          <label className="form-label">Menyampaikan</label>
-          <textarea
-            placeholder="Tulis ucapan dan doa Anda..."
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            rows="4"
-            required
-          />
-        </div>
-        
-        {notification.show && (
-          <div className={`notification ${notification.type}`}>
-            {notification.type === 'success' ? '✅' : '❌'} {notification.message}
+      <div className="greeting-form">
+        <form onSubmit={handleSubmit}>
+          <div className="form-field">
+            <label className="form-label">Dari</label>
+            <input
+              type="text"
+              placeholder="Nama Anda"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              readOnly={isGuestFromUrl()}
+              required
+            />
           </div>
-        )}
-        
-        <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? 'Mengirim...' : 'Kirim Ucapan'}
-        </button>
-      </form>
+          <div className="form-field">
+            <label className="form-label">Menyampaikan</label>
+            <textarea
+              placeholder="Tulis ucapan dan doa Anda..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              rows="4"
+              required
+            />
+          </div>
+          
+          {notification.show && (
+            <div className={`notification ${notification.type}`}>
+              {notification.type === 'success' ? '✅' : '❌'} {notification.message}
+            </div>
+          )}
+          
+          <button type="submit" disabled={isSubmitting}>
+            {isSubmitting ? 'Mengirim...' : 'Kirim Ucapan'}
+          </button>
+        </form>
 
-      <div className="greetings-list">
-        {greetings.map((greeting) => (
-          <GreetingCard key={greeting.id} greeting={greeting} />
-        ))}
+        <div className="greetings-list">
+          {greetings.map((greeting) => (
+            <GreetingCard key={greeting.id} greeting={greeting} />
+          ))}
+        </div>
       </div>
     </section>
   )
