@@ -1,4 +1,4 @@
-import { put, head } from '@vercel/blob'
+import { put, head, del } from '@vercel/blob'
 
 const BLOB_NAME = 'greetings.json'
 
@@ -18,6 +18,14 @@ async function readGreetings() {
 
 // Helper to write greetings to blob
 async function writeGreetings(greetings) {
+  try {
+    // Try to delete existing blob first
+    await del(BLOB_NAME).catch(() => {})
+  } catch (error) {
+    // Ignore delete errors
+  }
+  
+  // Create new blob
   const blob = await put(BLOB_NAME, JSON.stringify(greetings), {
     access: 'public',
     contentType: 'application/json'
