@@ -9,6 +9,7 @@ function GreetingSection() {
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [notification, setNotification] = useState({ show: false, type: '', message: '' })
 
   useEffect(() => {
     // Auto-fill guest name from URL
@@ -31,6 +32,13 @@ function GreetingSection() {
     return guestSlug && getGuestName(guestSlug)
   }
 
+  const showNotification = (type, message) => {
+    setNotification({ show: true, type, message })
+    setTimeout(() => {
+      setNotification({ show: false, type: '', message: '' })
+    }, 5000) // Hide after 5 seconds
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!name.trim() || !message.trim()) return
@@ -39,10 +47,10 @@ function GreetingSection() {
     try {
       await addGreeting(name, message)
       setMessage('')
-      alert('✅ Ucapan berhasil dikirim! Terima kasih.')
+      showNotification('success', 'Ucapan berhasil dikirim! Terima kasih.')
     } catch (error) {
       console.error('Error adding greeting:', error)
-      alert('❌ Gagal mengirim ucapan. Silakan coba lagi.')
+      showNotification('error', 'Gagal mengirim ucapan. Silakan coba lagi.')
     } finally {
       setIsSubmitting(false)
     }
@@ -74,6 +82,13 @@ function GreetingSection() {
             required
           />
         </div>
+        
+        {notification.show && (
+          <div className={`notification ${notification.type}`}>
+            {notification.type === 'success' ? '✅' : '❌'} {notification.message}
+          </div>
+        )}
+        
         <button type="submit" disabled={isSubmitting}>
           {isSubmitting ? 'Mengirim...' : 'Kirim Ucapan'}
         </button>
