@@ -45,7 +45,11 @@ function GreetingSection() {
 
     setIsSubmitting(true)
     try {
-      await addGreeting(name, message)
+      const newGreeting = await addGreeting(name, message)
+      
+      // Optimistic update - langsung tampilkan ucapan baru
+      setGreetings(prev => [newGreeting, ...prev])
+      
       setMessage('')
       showNotification('success', 'Ucapan berhasil dikirim! Terima kasih.')
     } catch (error) {
