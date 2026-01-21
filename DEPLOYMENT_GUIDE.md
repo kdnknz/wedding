@@ -1,6 +1,12 @@
 # Panduan Deploy ke Vercel
 
-## ✅ Yang Sudah Saya Setup
+## ⚠️ PENTING: Setup Database Dulu!
+
+Sebelum deploy, Anda perlu setup database untuk ucapan. Ikuti panduan di **`JSONBIN_SETUP.md`** (hanya 2 menit!).
+
+Atau biarkan default untuk pakai localStorage (ucapan tidak sync antar guest).
+
+---
 
 1. **Serverless API** di `api/greetings.js`
    - Endpoint untuk save & load ucapan

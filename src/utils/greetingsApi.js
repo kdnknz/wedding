@@ -1,8 +1,6 @@
-// API utility untuk greetings menggunakan Vercel Serverless Function
+// API utility untuk greetings menggunakan Vercel API
 
-const API_URL = import.meta.env.PROD 
-  ? '/api/greetings'  // Production (Vercel)
-  : 'http://localhost:5173/api/greetings'  // Development
+const API_URL = '/api/greetings'
 
 // Fetch all greetings
 export const fetchGreetings = async () => {
@@ -30,7 +28,8 @@ export const addGreeting = async (name, message) => {
     })
 
     if (!response.ok) {
-      throw new Error('Failed to add greeting')
+      const errorData = await response.json()
+      throw new Error(errorData.message || 'Failed to add greeting')
     }
 
     return await response.json()
@@ -40,7 +39,7 @@ export const addGreeting = async (name, message) => {
   }
 }
 
-// Subscribe to greetings (polling every 5 seconds)
+// Subscribe to greetings (polling every 10 seconds)
 export const subscribeToGreetings = (callback) => {
   let intervalId
 
@@ -52,8 +51,8 @@ export const subscribeToGreetings = (callback) => {
   // Initial fetch
   fetchAndUpdate()
 
-  // Poll every 5 seconds
-  intervalId = setInterval(fetchAndUpdate, 5000)
+  // Poll every 10 seconds
+  intervalId = setInterval(fetchAndUpdate, 10000)
 
   // Return unsubscribe function
   return () => {

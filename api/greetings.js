@@ -1,49 +1,31 @@
-// Vercel Serverless Function untuk handle greetings
-import { readFileSync, writeFileSync, existsSync } from 'fs'
-import { join } from 'path'
+import { put, head } from '@vercel/blob'
 
-const DATA_FILE = join(process.cwd(), 'data', 'greetings.json')
+const BLOB_NAME = 'greetings.json'
 
-// Ensure data directory and file exist
-function ensureDataFile() {
+// Helper to read greetings from blob
+async function readGreetings() {
   try {
-    if (!existsSync(DATA_FILE)) {
-      const dir = join(process.cwd(), 'data')
-      if (!existsSync(dir)) {
-        require('fs').mkdirSync(dir, { recursive: true })
-      }
-      writeFileSync(DATA_FILE, JSON.stringify([]))
-    }
+    const blob = await head(BLOB_NAME)
+    if (!blob) return []
+    
+    const response = await fetch(blob.url)
+    return await response.json()
   } catch (error) {
-    console.error('Error ensuring data file:', error)
-  }
-}
-
-// Read greetings from file
-function readGreetings() {
-  try {
-    ensureDataFile()
-    const data = readFileSync(DATA_FILE, 'utf8')
-    return JSON.parse(data)
-  } catch (error) {
-    console.error('Error reading greetings:', error)
+    console.log('No existing greetings, starting fresh')
     return []
   }
 }
 
-// Write greetings to file
-function writeGreetings(greetings) {
-  try {
-    ensureDataFile()
-    writeFileSync(DATA_FILE, JSON.stringify(greetings, null, 2))
-    return true
-  } catch (error) {
-    console.error('Error writing greetings:', error)
-    return false
-  }
+// Helper to write greetings to blob
+async function writeGreetings(greetings) {
+  const blob = await put(BLOB_NAME, JSON.stringify(greetings), {
+    access: 'public',
+    contentType: 'application/json'
+  })
+  return blob
 }
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
@@ -53,37 +35,48 @@ export default function handler(req, res) {
     return res.status(200).end()
   }
 
-  // GET: Fetch all greetings
-  if (req.method === 'GET') {
-    const greetings = readGreetings()
-    return res.status(200).json(greetings)
-  }
-
-  // POST: Add new greeting
-  if (req.method === 'POST') {
-    const { name, message } = req.body
-
-    if (!name || !message) {
-      return res.status(400).json({ error: 'Name and message are required' })
+  try {
+    // GET: Fetch all greetings
+    if (req.method === 'GET') {
+      const greetings = await readGreetings()
+      return res.status(200).json(greetings)
     }
 
-    const greetings = readGreetings()
-    const newGreeting = {
-      id: Date.now().toString(),
-      name: name.trim(),
-      message: message.trim(),
-      timestamp: new Date().toISOString(),
-      comments: []
-    }
+    // POST: Add new greeting
+    if (req.method === 'POST') {
+      const { name, message } = req.body
 
-    greetings.unshift(newGreeting) // Add to beginning (newest first)
-    
-    if (writeGreetings(greetings)) {
+      if (!name || !message) {
+        return res.status(400).json({ error: 'Name and message are required' })
+      }
+
+      // Get existing greetings
+      const greetings = await readGreetings()
+
+      // Create new greeting
+      const newGreeting = {
+        id: Date.now().toString(),
+        name: name.trim(),
+        message: message.trim(),
+        timestamp: new Date().toISOString(),
+        comments: []
+      }
+
+      // Add to beginning (newest first)
+      greetings.unshift(newGreeting)
+
+      // Save back to blob
+      await writeGreetings(greetings)
+
       return res.status(201).json(newGreeting)
-    } else {
-      return res.status(500).json({ error: 'Failed to save greeting' })
     }
-  }
 
-  return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' })
+  } catch (error) {
+    console.error('API Error:', error)
+    return res.status(500).json({ 
+      error: 'Internal server error',
+      message: error.message 
+    })
+  }
 }
