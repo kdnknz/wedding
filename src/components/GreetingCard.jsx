@@ -1,36 +1,26 @@
-import { useState } from 'react'
-
 function GreetingCard({ greeting }) {
-  const [showComments, setShowComments] = useState(false)
+  // Format timestamp
+  const formatDate = (timestamp) => {
+    if (!timestamp) return 'Baru saja'
+    try {
+      const date = new Date(timestamp)
+      return date.toLocaleDateString('id-ID', { 
+        day: 'numeric', 
+        month: 'long', 
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })
+    } catch {
+      return 'Baru saja'
+    }
+  }
 
   return (
-    <div className="greeting-card">
-      <div className="greeting-header">
-        <strong>{greeting.name}</strong>
-        <span className="greeting-time">
-          {greeting.timestamp?.toDate?.()?.toLocaleDateString('id-ID') || 'Baru saja'}
-        </span>
-      </div>
-      <p className="greeting-message">{greeting.message}</p>
-      
-      {greeting.comments && greeting.comments.length > 0 && (
-        <button 
-          className="toggle-comments"
-          onClick={() => setShowComments(!showComments)}
-        >
-          {showComments ? 'Sembunyikan' : 'Lihat'} {greeting.comments.length} komentar
-        </button>
-      )}
-
-      {showComments && greeting.comments && (
-        <div className="comments-list">
-          {greeting.comments.map((comment, idx) => (
-            <div key={idx} className="comment">
-              <strong>{comment.name}</strong>: {comment.comment}
-            </div>
-          ))}
-        </div>
-      )}
+    <div className="greeting-item">
+      <div className="greeting-name">{greeting.name}</div>
+      <div className="greeting-message">{greeting.message}</div>
+      <div className="greeting-date">{formatDate(greeting.timestamp)}</div>
     </div>
   )
 }
