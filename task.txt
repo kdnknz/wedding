@@ -1,0 +1,70 @@
+Nama Aplikasi
+Aplikasi Undangan Pernikahan Berbasis Web
+
+Deskripsi Singkat
+Aplikasi undangan nikah berbasis web yang dapat dibuka melalui perangkat mobile maupun laptop (responsif).
+Aplikasi tidak membutuhkan backend server kustom dan di-build menjadi satu berkas HTML statis.
+Konten undangan dapat diubah melalui satu file data terpusat.
+Aplikasi memiliki dua halaman utama, fitur musik otomatis, dan fitur ucapan tamu dengan komentar.
+
+Tujuan Aplikasi
+1. Menyediakan undangan digital praktis dan ringan
+2. Dapat dibagikan melalui link
+3. Mempermudah penggantian isi undangan melalui satu file data
+4. Menyediakan wadah interaksi tamu melalui fitur ucapan
+5. Tampilan responsif untuk berbagai perangkat layar
+
+Teknologi yang Digunakan
+Frontend
+- Framework bebas yang mendukung build statis (React+Vite, Svelte, Vue, atau HTML+CSS+JS)
+- Output build: index.html + aset statis (CSS, JS, gambar, audio)
+- File Data: satu file konfigurasi (data.js/data.json)
+- Music Player: JavaScript audio API dengan play/pause default auto-play
+
+Database & Ucapan
+- Tidak memerlukan backend
+- Menggunakan layanan database berbasis cloud yang dapat diakses via JavaScript
+- Rekomendasi utama:
+  * Firebase Firestore (direkomendasikan, struktur fleksibel, real-time)
+  * Alternatif: Firebase Realtime Database atau Supabase
+- Fungsi database:
+  * Menyimpan daftar ucapan dari tamu
+  * Tamu dapat mengirim, melihat, mengedit ucapan sendiri
+  * Tamu dapat mengomentari ucapan tamu lain
+  * Data update otomatis tanpa reload
+
+Struktur Halaman
+1. Home (Cover)
+   - Background gambar/tema
+   - Nama kedua mempelai
+   - Tanggal acara
+   - Tombol "Buka Undangan"
+   - Navigasi ke halaman utama
+
+2. Halaman Utama Undangan
+   - Detail acara akad dan resepsi
+   - Alamat lokasi dan waktu
+   - Informasi tambahan (kutipan, narasi, dsb)
+   - Fitur ucapan dan komentar
+   - Opsional: galeri foto, peta, RSVP
+
+Fitur Ucapan
+- Input nama dan pesan untuk pengunjung
+- Ucapan tersimpan ke database cloud
+- Pengunjung dapat mengedit ucapannya (berdasarkan ID atau localStorage)
+- Komentar balasan di setiap ucapan
+- Data tampil real-time (tanpa refresh)
+- Aturan akses diatur melalui security rules database
+
+Responsivitas
+- Desain responsif mobile-first
+- Mendukung perangkat mobile, tablet, dan desktop
+- Menggunakan CSS Flex/Grid dan media queries
+
+Ketentuan Tambahan
+- Tidak memerlukan server hosting backend
+- Konten statis tetap tersimpan dalam satu file data
+- Database memerlukan koneksi internet aktif
+- Dapat di-host di layanan static hosting (GitHub Pages, Netlify, Vercel)
+- Build ringan dan cepat dimuat
+ 
