@@ -922,66 +922,89 @@ body {
 .greetings-list {
   max-width: 600px;
   margin: 0 auto;
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(197, 179, 150, 0.15);
+}
+
+.greetings-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.greetings-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.greetings-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c5b396 0%, #a89968 100%);
+  border-radius: 10px;
+}
+
+.greetings-list::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #b5a386 0%, #988858 100%);
 }
 
 .greeting-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  margin-bottom: 20px;
-  border-radius: 16px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(197, 179, 150, 0.12);
+  background: transparent;
+  padding: 15px 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  border: none;
+  border-bottom: 1px solid rgba(197, 179, 150, 0.15);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.greeting-card:last-child {
+  border-bottom: none;
 }
 
 .greeting-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #c5b396, #a89968);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+  display: none;
 }
 
 .greeting-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 179, 150, 0.1);
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.greeting-card:hover::before {
-  transform: scaleX(1);
+  transform: none;
+  box-shadow: none;
+  background: rgba(197, 179, 150, 0.05);
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 8px;
 }
 
 .greeting-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .greeting-header strong {
   color: #2c3e50;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .greeting-time {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #999;
   font-weight: 400;
 }
 
 .greeting-message {
   color: #555;
-  line-height: 1.8;
-  font-size: 0.98rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .toggle-comments {
@@ -989,9 +1012,9 @@ body {
   border: none;
   color: #c5b396;
   cursor: pointer;
-  font-size: 0.9rem;
-  margin-top: 12px;
-  padding: 8px 0;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  padding: 4px 0;
   font-weight: 500;
   transition: all 0.2s ease;
 }
@@ -1002,22 +1025,31 @@ body {
 }
 
 .comments-list {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 2px solid #f0f0f0;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(197, 179, 150, 0.2);
 }
 
 .comment {
-  padding: 15px;
-  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-  border-radius: 12px;
-  margin-bottom: 12px;
-  font-size: 0.92rem;
-  border-left: 3px solid #6b7280;
+  padding: 10px 12px;
+  background: rgba(197, 179, 150, 0.08);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  border-left: 2px solid #c5b396;
   transition: all 0.2s ease;
 }
 
 .comment:hover {
+  transform: translateX(3px);
+  background: rgba(197, 179, 150, 0.12);
+}
+
+.comment strong {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
   transform: translateX(5px);
   box-shadow: 0 2px 8px rgba(107, 114, 128, 0.1);
 }
