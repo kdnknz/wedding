@@ -992,20 +992,14 @@ body {
 
 /* Old styles - remove these */
 .greeting-card,
+/* Old styles - remove these */
+.greeting-card,
 .greeting-header,
 .greeting-time,
 .toggle-comments,
 .comments-list,
 .comment {
   display: none;
-}
-  transform: translateX(5px);
-  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.1);
-}
-
-.comment strong {
-  color: #2c3e50;
-  font-weight: 600;
 }
 
 /* Footer */
