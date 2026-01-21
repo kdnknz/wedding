@@ -44,9 +44,18 @@ export default async function handler(req, res) {
   }
 
   try {
-    // GET: Fetch all greetings
+    // GET: Fetch all greetings or only new ones since timestamp
     if (req.method === 'GET') {
       const greetings = await readGreetings()
+      
+      // Check if client wants only new greetings
+      const since = req.query?.since
+      if (since) {
+        // Filter greetings newer than 'since' timestamp
+        const filtered = greetings.filter(g => g.timestamp > since)
+        return res.status(200).json(filtered)
+      }
+      
       return res.status(200).json(greetings)
     }
 

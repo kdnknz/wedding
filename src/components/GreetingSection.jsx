@@ -21,8 +21,14 @@ function GreetingSection() {
       }
     }
 
-    const unsubscribe = subscribeToGreetings((data) => {
-      setGreetings(data)
+    const unsubscribe = subscribeToGreetings((newGreetings, isInitial) => {
+      if (isInitial) {
+        // First load: replace all greetings
+        setGreetings(newGreetings)
+      } else {
+        // Incremental update: prepend new greetings
+        setGreetings(prev => [...newGreetings, ...prev])
+      }
     })
     return () => unsubscribe()
   }, [])
