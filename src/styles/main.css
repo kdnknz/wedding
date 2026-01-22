@@ -235,24 +235,45 @@ body {
 /* Invitation Page */
 .invitation-page {
   min-height: 100vh;
+  position: relative;
+  color: #333;
+  padding: 20px;
+}
+
+/* Background layer - separate from content */
+.invitation-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('/images/main-background.jfif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  color: #333;
-  padding: 20px;
-  overflow: hidden;
+  z-index: -2;
 }
 
-.invitation-page::before {
+/* Overlay layer */
+.invitation-page::after {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+/* Mobile fix for background */
+@media (max-width: 768px) {
+  .invitation-page {
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 100%;
+  }
 }
 
 .invitation-page > * {
