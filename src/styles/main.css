@@ -959,21 +959,22 @@ body {
 }
 
 .greetings-list::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 .greetings-list::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(197, 179, 150, 0.15);
   border-radius: 10px;
 }
 
 .greetings-list::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #c5b396 0%, #a89968 100%);
+  background: #c5b396;
   border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .greetings-list::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #b5a386 0%, #988858 100%);
+  background: #a89968;
 }
 
 /* Mobile: Make scrollbar more visible */
@@ -996,7 +997,7 @@ body {
   }
   
   .greetings-list::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
   
   .greetings-list::-webkit-scrollbar-track {
@@ -1007,6 +1008,7 @@ body {
   .greetings-list::-webkit-scrollbar-thumb {
     background: #c5b396;
     border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
   }
 }
 
