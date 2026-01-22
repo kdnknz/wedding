@@ -240,6 +240,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  color: #333;
   padding: 20px;
   overflow: hidden;
 }
