@@ -274,6 +274,19 @@ body {
     background-size: cover;
     min-height: 100%;
   }
+  
+  /* Make cards more transparent on mobile */
+  .couple-card,
+  .event-card,
+  .greeting-form {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+  }
+  
+  .couple-card:hover,
+  .event-card:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .invitation-page > * {
