@@ -47,18 +47,18 @@ function Invitation() {
       {/* Couple Info Section */}
       <section className="couple-info animate-on-scroll">
         <div className="couple-card">
-          <div className="couple-photo">
+          {/* <div className="couple-photo"> */}
             <img src={weddingData.couple.bridePhoto} alt={weddingData.couple.bride} />
-          </div>
+          {/* </div> */}
           <h3>{weddingData.couple.bride}</h3>
           <p className="couple-child">{weddingData.couple.brideChild}</p>
           <p className="couple-parents">{weddingData.couple.brideParents}</p>
         </div>
         
         <div className="couple-card">
-          <div className="couple-photo">
+          {/* <div className="couple-photo"> */}
             <img src={weddingData.couple.groomPhoto} alt={weddingData.couple.groom} />
-          </div>
+          {/* </div> */}
           <h3>{weddingData.couple.groom}</h3>
           <p className="couple-child">{weddingData.couple.groomChild}</p>
           <p className="couple-parents">{weddingData.couple.groomParents}</p>
