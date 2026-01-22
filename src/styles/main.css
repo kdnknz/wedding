@@ -57,8 +57,7 @@ body {
 }
 
 .guest-greeting {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
   padding: 25px 40px;
   border-radius: 16px;
   margin-bottom: 40px;
@@ -960,55 +959,60 @@ body {
 }
 
 .greetings-list::-webkit-scrollbar-track {
-  background: rgba(197, 179, 150, 0.15);
+  background: rgba(138, 122, 80, 0.2);
   border-radius: 10px;
 }
 
 .greetings-list::-webkit-scrollbar-thumb {
-  background: #c5b396;
+  background: #8a7a50;
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .greetings-list::-webkit-scrollbar-thumb:hover {
-  background: #a89968;
+  background: #6d5f3d;
 }
 
 /* Mobile: Make scrollbar more visible */
 @media (max-width: 768px) {
   .greetings-list {
-    /* Add padding to show there's more content */
     position: relative;
+    scrollbar-width: auto;
+    scrollbar-color: #8a7a50 rgba(197, 179, 150, 0.2);
   }
   
+  /* Gradient indicator at bottom */
   .greetings-list::after {
     content: '';
     position: sticky;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 30px;
-    background: linear-gradient(to top, rgba(255,255,255,0.9), transparent);
+    height: 40px;
+    background: linear-gradient(to top, rgba(255,255,255,0.95), transparent);
     pointer-events: none;
     display: block;
   }
   
+  /* For webkit browsers (Chrome, Safari on iOS) */
   .greetings-list::-webkit-scrollbar {
-    width: 12px;
+    width: 14px;
+    -webkit-appearance: none;
   }
   
   .greetings-list::-webkit-scrollbar-track {
-    background: rgba(197, 179, 150, 0.15);
+    background: rgba(138, 122, 80, 0.15);
     border-radius: 10px;
+    margin: 5px 0;
   }
   
   .greetings-list::-webkit-scrollbar-thumb {
-    background: #a89968;
+    background: #8a7a50;
     border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
   }
   
   .greetings-list::-webkit-scrollbar-thumb:active {
-    background: #8a7a50;
+    background: #6d5f3d;
   }
 }
 
