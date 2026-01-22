@@ -239,9 +239,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   position: relative;
   padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .invitation-page::before {
@@ -260,17 +260,6 @@ body {
   z-index: 1;
   max-width: 900px;
   margin: 0 auto;
-}
-
-/* Desktop: use fixed attachment */
-@media (min-width: 769px) {
-  .invitation-page {
-    background-attachment: fixed;
-  }
-  
-  .invitation-page::before {
-    position: fixed;
-  }
 }
 
 .hero-section {
@@ -938,12 +927,14 @@ body {
 .greetings-list {
   max-height: 400px;
   overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scroll */
   padding: 0;
   background: transparent;
   border-radius: 0;
   border: none;
   box-shadow: none;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling di iOS */
+  width: 100%; /* Ensure full width */
 }
 
 .greetings-list::-webkit-scrollbar {
@@ -998,6 +989,10 @@ body {
   padding: 20px 0;
   border-bottom: 1px solid rgba(197, 179, 150, 0.2);
   transition: all 0.2s ease;
+  overflow-wrap: break-word; /* Break long words */
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 .greeting-item:last-child {
