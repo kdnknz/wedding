@@ -994,18 +994,21 @@ body {
   }
   
   .greetings-list::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
   }
   
   .greetings-list::-webkit-scrollbar-track {
-    background: rgba(197, 179, 150, 0.2);
+    background: rgba(197, 179, 150, 0.15);
     border-radius: 10px;
   }
   
   .greetings-list::-webkit-scrollbar-thumb {
-    background: #c5b396;
+    background: #a89968;
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .greetings-list::-webkit-scrollbar-thumb:active {
+    background: #8a7a50;
   }
 }
 
@@ -1234,13 +1237,14 @@ body {
 }
 
 .countdown-item {
-  background: linear-gradient(135deg, #c5b396 0%, #a89968 100%);
+  background: rgba(197, 179, 150, 0.25);
   padding: 30px 20px;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(197, 179, 150, 0.25);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(197, 179, 150, 0.3);
 }
 
 .countdown-item::before {
@@ -1250,19 +1254,20 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(197, 179, 150, 0.1) 0%, transparent 70%);
   animation: rotate 10s linear infinite;
 }
 
 .countdown-item:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(197, 179, 150, 0.35);
+  background: rgba(197, 179, 150, 0.35);
 }
 
 .countdown-value {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #2c3e50;
   font-family: 'Poppins', sans-serif;
   position: relative;
   z-index: 1;
@@ -1270,7 +1275,7 @@ body {
 
 .countdown-label {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.9);
+  color: #555;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 8px;
