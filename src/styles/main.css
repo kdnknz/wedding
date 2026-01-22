@@ -274,19 +274,6 @@ body {
     background-size: cover;
     min-height: 100%;
   }
-  
-  /* Make cards more transparent on mobile */
-  .couple-card,
-  .event-card,
-  .greeting-form {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
-  }
-  
-  .couple-card:hover,
-  .event-card:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
 }
 
 .invitation-page > * {
@@ -1079,33 +1066,6 @@ body {
 .comments-list,
 .comment {
   display: none;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: #888;
-  font-style: italic;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .couple-names h2 {
-    font-size: 2rem;
-  }
-  
-  .hero-section .couple-names h2 {
-    font-size: 2rem;
-  }
-  
-  .event-card {
-    padding: 20px;
-  }
-  
-  .greeting-form {
-    padding: 20px;
-  }
 }
 
 /* Footer */
