@@ -533,6 +533,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+  background: transparent;
 }
 
 .couple-photo img {
@@ -541,6 +542,7 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
+  opacity: 0.95;
 }
 
 .couple-card h3 {
