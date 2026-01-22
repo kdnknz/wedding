@@ -513,8 +513,7 @@ body {
   flex: 0 0 300px;
   width: 300px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.25);
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
@@ -525,7 +524,7 @@ body {
 .couple-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(197, 179, 150, 0.15);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .couple-photo {
@@ -686,8 +685,7 @@ body {
 }
 
 .event-card {
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.25);
   padding: 40px;
   margin-bottom: 30px;
   border-radius: 20px;
@@ -711,7 +709,7 @@ body {
 .event-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(197, 179, 150, 0.15);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .event-card h3 {
@@ -818,8 +816,7 @@ body {
 .greeting-form {
   max-width: 600px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.25);
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
