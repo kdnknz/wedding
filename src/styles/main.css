@@ -503,7 +503,7 @@ body {
   padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -511,6 +511,7 @@ body {
 .couple-card {
   flex: 0 0 300px;
   width: 300px;
+  min-height: 400px;
   text-align: center;
   background: rgba(255, 255, 255, 0.25);
   padding: 30px;
@@ -518,6 +519,9 @@ body {
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
   border: 1px solid rgba(197, 179, 150, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .couple-card:hover {
@@ -551,6 +555,10 @@ body {
   color: #2c3e50;
   margin: 15px 0 10px;
   font-weight: 600;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .couple-child {
@@ -558,6 +566,10 @@ body {
   color: #666;
   margin: 8px 0;
   font-style: italic;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .couple-parents {
@@ -565,6 +577,11 @@ body {
   color: #888;
   margin: 5px 0;
   line-height: 1.6;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .couple-divider {
@@ -600,6 +617,7 @@ body {
     flex: 0 0 auto;
     width: 100%;
     max-width: 300px;
+    min-height: 380px;
   }
   
   .couple-divider {
@@ -1085,34 +1103,131 @@ body {
 /* Footer */
 .footer {
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c5b396, transparent);
+}
+
+.footer-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-message {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 35px;
+  padding: 0 20px;
+  font-weight: 400;
+}
+
+.footer-hadist {
+  background: rgba(197, 179, 150, 0.15);
+  padding: 30px 35px;
+  border-radius: 16px;
+  margin: 35px 0;
+  border-left: 4px solid #c5b396;
+  position: relative;
+}
+
+.hadist-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #2c3e50;
+  font-style: italic;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.hadist-text::before {
+  content: '"';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  color: #c5b396;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.hadist-source {
+  font-size: 0.9rem;
   color: #888;
   font-style: italic;
+  text-align: right;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer-thanks {
+  font-size: 1.05rem;
+  color: #666;
+  margin: 35px 0 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.footer-signature {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
+  color: #2c3e50;
+  font-style: italic;
+  margin-top: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.footer p {
-  position: relative;
-  display: inline-block;
-}
-
-.footer p::before,
-.footer p::after {
-  content: '❤';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #667eea;
-  font-size: 0.8rem;
-}
-
-.footer p::before {
-  left: -30px;
-}
-
-.footer p::after {
-  right: -30px;
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 15px 30px;
+    margin-top: 50px;
+  }
+  
+  .footer-message {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+  
+  .footer-hadist {
+    padding: 25px 25px;
+    margin: 30px 0;
+  }
+  
+  .hadist-text {
+    font-size: 1rem;
+  }
+  
+  .hadist-text::before {
+    font-size: 50px;
+    top: -10px;
+    left: -10px;
+  }
+  
+  .hadist-source {
+    font-size: 0.85rem;
+  }
+  
+  .footer-thanks {
+    font-size: 1rem;
+  }
+  
+  .footer-signature {
+    font-size: 1.05rem;
+  }
 }
 
 /* Responsive */

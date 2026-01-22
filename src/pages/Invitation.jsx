@@ -83,7 +83,30 @@ function Invitation() {
       </div>
 
       <footer className="footer">
-        <p>Terima kasih atas doa dan kehadiran Anda</p>
+        <div className="footer-content">
+          <p className="footer-message">
+           Untuk Bapak/Ibu yang telah menikah, semoga senantiasa diberikan kebahagiaan dan keberkahan, serta selalu menjadikan pernikahan tersebut sebagai ladang pahala.
+          Sementara bagi teman-teman kami yang belum menikah, semoga Allah segera memudahkan jalannya, karena pernikahan bukanlah sebuah aib, melainkan bagian dari perintah agama.</p>
+                    
+          <div className="footer-hadist">
+            <p className="hadist-text">
+              “Apabila datang kepadamu seseorang yang kamu ridhai agama dan akhlaknya,
+              maka nikahkanlah dia. Jika tidak kamu lakukan, niscaya akan terjadi fitnah
+              di muka bumi dan kerusakan yang besar.”
+            </p>
+            <p className="hadist-source">
+               <a href="https://www.hadits.id/hadits/tirmidzi/1085" target="_blank" rel="noopener noreferrer">— HR. Tirmidzi No. 1085 —</a>
+            </p>
+          </div>
+          
+          <p className="footer-thanks">
+            Terima kasih atas doa dan kehadiran Anda
+          </p>
+          
+          <p className="footer-signature">
+            Wassalamu'alaikum Warahmatullahi Wabarakatuh
+          </p>
+        </div>
       </footer>
     </div>
   )
