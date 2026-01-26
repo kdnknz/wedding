@@ -1,10 +1,12 @@
 import { weddingData } from '../data/data'
-import { getGuestName } from '../data/guests'
+import { getGuestName, getGuestSession } from '../data/guests'
 import { getGuestNameFromUrl } from '../utils/urlParams'
 
 function Home({ onOpen }) {
   const guestSlug = getGuestNameFromUrl()
   const guestName = guestSlug ? getGuestName(guestSlug) : null
+  const guestSession = guestSlug ? getGuestSession(guestSlug) : null
+  const timeSession = guestSession ? weddingData.event.sessions[guestSession] : null
 
   return (
     <div className="home-page">
@@ -16,8 +18,8 @@ function Home({ onOpen }) {
           <h2>{weddingData.couple.groom}</h2>
         </div>
         <p className="event-date">{weddingData.event.akad.date}</p>
-        {weddingData.event.timeSession && (
-          <p className="event-time-session">({weddingData.event.timeSession})</p>
+        {timeSession && (
+          <p className="event-time-session">({timeSession})</p>
         )}
         
         {guestName && (
