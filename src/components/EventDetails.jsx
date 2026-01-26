@@ -29,9 +29,9 @@ function EventDetails() {
       {showSessionInfo && (
         <div className="session-info">
           <p className="session-text">
-            ✨ Anda diundang pada <strong>Sesi {guestSession}</strong>
+            Kami mengharapkan kehadiran Bapak/Ibu/Saudara/i pada jam:
           </p>
-          <p className="session-time">Waktu kehadiran: <strong>{sessionTime}</strong></p>
+          <p className="session-time"><strong>{sessionTime}</strong></p>
         </div>
       )}
       
