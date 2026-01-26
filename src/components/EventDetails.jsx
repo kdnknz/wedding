@@ -14,9 +14,9 @@ function EventDetails() {
     if (guestSession === 1) {
       return "09:00 - 11:00 WIB"
     } else if (guestSession === 2) {
-      return "12:00 - 15:00 WIB"
+      return "12:00 - 14:30 WIB"
     }
-    return "09:00 - 15:00 WIB" // Default jika tidak ada sesi
+    return "09:00 - 14:30 WIB" // Default jika tidak ada sesi
   }
   
   const sessionTime = getSessionTime()
@@ -29,7 +29,8 @@ function EventDetails() {
       {showSessionInfo && (
         <div className="session-info">
           <p className="session-text">
-            Kami mengharapkan kehadiran Bapak/Ibu/Saudara/i pada jam:
+            Kami mengharapkan kehadiran Bapak/Ibu/Saudara/i 
+            pada pukul :
           </p>
           <p className="session-time"><strong>{sessionTime}</strong></p>
         </div>
