@@ -25,7 +25,8 @@ export const weddingData = {
       venueType: "Resto & Kafe",
       address: "Jl. Jend. Sudirman Komp. Perkantoran Cikupa, Pandeglang, Kec. Pandeglang, Kabupaten Pandeglang, Banten 42211",
       mapsLink: "https://maps.app.goo.gl/xLiq7Wr24YDaSU3J9"
-    }
+    },
+    timeSession: "Pukul 09.00 - 15.00 WIB"
   },
   countdownDate: "2026-04-24T09:00:00",
   quote: "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya.",

@@ -16,6 +16,9 @@ function Home({ onOpen }) {
           <h2>{weddingData.couple.groom}</h2>
         </div>
         <p className="event-date">{weddingData.event.akad.date}</p>
+        {weddingData.event.timeSession && (
+          <p className="event-time-session">({weddingData.event.timeSession})</p>
+        )}
         
         {guestName && (
           <div className="guest-greeting">
