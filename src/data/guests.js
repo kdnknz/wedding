@@ -1,6 +1,6 @@
 // Daftar tamu undangan
 // Format: { name: "Nama Tamu", slug: "nama-tamu", session: 1 atau 2 }
-// Link akan menjadi: https://adityamutiara.vercel.app/?to=nama-tamu
+// Link akan menjadi: https://aditya-adinda.vercel.app/?to=nama-tamu
 // Session 1: 09:00 - 11:00 WIB
 // Session 2: 12:00 - 15:00 WIB
 
@@ -123,7 +123,7 @@ export function getGuestSession(slug) {
 }
 
 // Fungsi untuk mendapatkan semua link undangan
-export function getAllInvitationLinks(baseUrl = "https://your-domain.com") {
+export function getAllInvitationLinks(baseUrl = "https://aditya-adinda.vercel.app") {
   return guestList.map(guest => ({
     name: guest.name,
     slug: guest.slug,

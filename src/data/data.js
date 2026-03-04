@@ -1,7 +1,7 @@
 export const weddingData = {
   couple: {
     bride: "Adinda Mutiara",
-    brideParents: "Bapak Mukti & Ibu Rahmayanti",
+    brideParents: "Bapak Mukti & Ibu Rahmayanty",
     brideChild: "Anak kedua dari",
     bridePhoto: "/images/adinda.png",
     groom: "Aditya",
