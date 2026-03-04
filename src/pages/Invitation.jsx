@@ -86,7 +86,7 @@ function Invitation() {
         <div className="footer-content">
           <p className="footer-message">
            Untuk Bapak/Ibu yang telah menikah, semoga senantiasa diberikan kebahagiaan dan keberkahan, serta selalu menjadikan pernikahan tersebut sebagai ladang pahala.
-          Sementara bagi teman-teman kami yang belum menikah, semoga Allah segera memudahkan jalannya, karena pernikahan bukanlah sebuah aib, melainkan bagian dari perintah agama.</p>
+          Sementara bagi teman-teman kami yang belum menikah, semoga Allah mudahkan jalan teman-teman sekalian, karena pernikahan bukanlah sebuah aib, melainkan bagian dari perintah agama.</p>
                     
           <div className="footer-hadist">
             <p className="hadist-text">
