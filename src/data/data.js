@@ -3,11 +3,11 @@ export const weddingData = {
     bride: "Adinda Mutiara",
     brideParents: "Bapak Mukti & Ibu Rahmayanti",
     brideChild: "Anak kedua dari",
-    bridePhoto: "/images/adinda.jpeg",
+    bridePhoto: "/images/adinda.png",
     groom: "Aditya",
     groomParents: "Bapak Nuryadi & Ibu Devis Wardani",
     groomChild: "Anak kedua dari",
-    groomPhoto: "/images/aditya.jpeg"
+    groomPhoto: "/images/aditya.png"
   },
   event: {
     akad: {
