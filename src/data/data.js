@@ -3,15 +3,15 @@ export const weddingData = {
     bride: "Adinda Mutiara",
     brideParents: "Bapak Mukti & Ibu Rahmayanti",
     brideChild: "Anak kedua dari",
-    bridePhoto: "/images/adinda.png",
+    bridePhoto: "/images/adinda.jpeg",
     groom: "Aditya",
     groomParents: "Bapak Nuryadi & Ibu Devis Wardani",
     groomChild: "Anak kedua dari",
-    groomPhoto: "/images/aditya.png"
+    groomPhoto: "/images/aditya.jpeg"
   },
   event: {
     akad: {
-      date: "Sabtu, 24 April 2026",
+      date: "Sabtu, 25 April 2026",
       time: "09:00 WIB",
       venue: "Saung Kita Cikupa Pandeglang",
       venueType: "Resto & Kafe",
@@ -19,7 +19,7 @@ export const weddingData = {
       mapsLink: "https://maps.app.goo.gl/xLiq7Wr24YDaSU3J9"
     },
     resepsi: {
-      date: "Sabtu, 24 April 2026",
+      date: "Sabtu, 25 April 2026",
       time: "Setelah Akad Nikah - 15:00 WIB",
       venue: "Saung Kita Cikupa Pandeglang",
       venueType: "Resto & Kafe",
