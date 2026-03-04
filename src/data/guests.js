@@ -97,6 +97,7 @@ export const guestList = [
   { name: "Dilla Nurkholisoh", slug: "dilla-nurkholisoh", session: 2 },
   { name: "Leli Kurniati", slug: "leli-kurniati", session: 2 },
   { name: "Sukmiati", slug: "sukmiati", session: 2 },
+  { name: "Dewi", slug: "dewi", session: 2 },
 ]
 
 // Fungsi untuk generate link undangan

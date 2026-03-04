@@ -308,7 +308,7 @@ body {
 .opening-section {
   text-align: center;
   padding: 40px 20px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .bismillah {
@@ -509,7 +509,7 @@ body {
 /* Couple Info Section */
 .couple-info {
   max-width: 900px;
-  margin: 20px auto 40px;
+  margin: 10px auto 40px;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -524,7 +524,7 @@ body {
   min-height: 400px;
   text-align: center;
   background: rgba(255, 255, 255, 0.25);
-  padding: 30px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
@@ -543,7 +543,7 @@ body {
 .couple-photo {
   width: 200px;
   height: 200px;
-  margin: 0 auto 20px;
+  margin: 0 auto 8px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -563,7 +563,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   color: #2c3e50;
-  margin: 15px 0 10px;
+  margin: 0 0 0 0;
   font-weight: 600;
   min-height: 50px;
   display: flex;
@@ -574,7 +574,7 @@ body {
 .couple-child {
   font-size: 0.95rem;
   color: #666;
-  margin: 8px 0;
+  margin: 0;
   font-style: italic;
   min-height: 25px;
   display: flex;
@@ -585,7 +585,7 @@ body {
 .couple-parents {
   font-size: 0.9rem;
   color: #888;
-  margin: 5px 0;
+  margin: 0;
   line-height: 1.6;
   min-height: 50px;
   display: flex;

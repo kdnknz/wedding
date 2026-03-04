@@ -62,6 +62,6 @@ npm run preview      # Preview production build locally
 
 ## Styling
 
-- CSS with Flexbox/Grid for layouts
+- CSS with Flexbox/Grid for layouts 
 - Media queries for responsive design
 - Mobile-first approach
