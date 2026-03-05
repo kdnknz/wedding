@@ -68,7 +68,7 @@ body {
 }
 
 .guest-greeting p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 5px 0;
   opacity: 0.8;
   font-weight: 300;
@@ -98,7 +98,7 @@ body {
 
 .home-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
   font-weight: 300;
   letter-spacing: 4px;
@@ -149,7 +149,7 @@ body {
 }
 
 .event-date {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 2rem 0;
   font-weight: 300;
   letter-spacing: 1px;
@@ -158,7 +158,7 @@ body {
 }
 
 .event-time-session {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: -1.5rem 0 2rem;
   font-weight: 300;
   letter-spacing: 0.5px;
@@ -172,7 +172,7 @@ body {
   color: white;
   border: none;
   padding: 16px 48px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -322,14 +322,14 @@ body {
 }
 
 .opening-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   margin-bottom: 20px;
   font-style: italic;
 }
 
 .opening-message {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   line-height: 1.8;
   max-width: 600px;
@@ -382,7 +382,7 @@ body {
 
 .hero-section h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -486,7 +486,7 @@ body {
 }
 
 .couple-parents {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   font-weight: 500;
   margin-top: 5px;
@@ -681,7 +681,7 @@ body {
 
 .quote-source {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   font-weight: 500;
   letter-spacing: 1px;
@@ -729,7 +729,7 @@ body {
 }
 
 .session-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   margin-bottom: 10px;
   font-weight: 400;
@@ -738,11 +738,11 @@ body {
 .session-text strong {
   color: #0d1e3c;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .session-time {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   margin: 0;
 }
@@ -750,7 +750,7 @@ body {
 .session-time strong {
   color: #214577;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .event-card {
@@ -792,14 +792,14 @@ body {
 .event-card p {
   margin: 12px 0;
   color: #214577;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
 .event-date {
   font-weight: 600;
   color: #214577;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .event-time {
@@ -811,14 +811,14 @@ body {
 
 .event-time::before {
   content: '🕐';
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .event-venue {
   font-weight: 600;
   margin-top: 20px;
   color: #667eea;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .event-address {
@@ -841,7 +841,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 25px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(123, 159, 232, 0.3);
@@ -904,7 +904,7 @@ body {
 
 .form-label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   margin-bottom: 8px;
   font-style: italic;
@@ -918,7 +918,7 @@ body {
   border: 2px solid #e8e8e8;
   border-radius: 12px;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   background: #fafafa;
 }
@@ -981,7 +981,7 @@ body {
   padding: 15px 20px;
   border-radius: 12px;
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   animation: slideDown 0.3s ease-out;
   text-align: center;
@@ -1120,7 +1120,7 @@ body {
 
 .greeting-name {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   margin-bottom: 8px;
 }
@@ -1128,7 +1128,7 @@ body {
 .greeting-message {
   color: #214577;
   line-height: 1.7;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 8px;
 }
 
@@ -1175,7 +1175,7 @@ body {
 }
 
 .footer-message {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.9;
   color: #214577;
   margin-bottom: 35px;
@@ -1244,7 +1244,7 @@ body {
 
 .footer-signature {
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #214577;
   font-style: italic;
   margin-top: 25px;
@@ -1259,7 +1259,7 @@ body {
   }
   
   .footer-message {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0 10px;
   }
   
@@ -1269,7 +1269,7 @@ body {
   }
   
   .hadist-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .hadist-text::before {
@@ -1279,11 +1279,11 @@ body {
   }
   
   .hadist-source {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .footer-thanks {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .footer-signature {
@@ -1343,7 +1343,7 @@ body {
   }
   
   .quote {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .music-player {
@@ -1365,7 +1365,7 @@ body {
   
   .open-button {
     padding: 14px 36px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .couple-card h3 {
