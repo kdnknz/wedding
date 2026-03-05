@@ -11,6 +11,7 @@ function Home({ onOpen }) {
   return (
     <div className="home-page">
       <div className="home-content">
+        <p>&nbsp;</p>
         <h1 className="home-title">Undangan Pernikahan</h1>
         <div className="couple-names">
           <h2>{weddingData.couple.bride}</h2>
