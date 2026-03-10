@@ -28,7 +28,7 @@ export const weddingData = {
     },
     sessions: {
       1: "Pukul 09.00 - 11.00 WIB",
-      2: "Pukul 12.00 - 15.00 WIB"
+      2: "Pukul 12.00 - 14.00 WIB"
     }
   },
   countdownDate: "2026-04-24T09:00:00",

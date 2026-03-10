@@ -29,7 +29,7 @@ session1.forEach((guest, index) => {
 })
 
 console.log("")
-console.log("SESI 2 (12.00 - 15.00 WIB):")
+console.log("SESI 2 (12.00 - 14.00 WIB):")
 console.log("-".repeat(80))
 session2.forEach((guest, index) => {
   const link = `${BASE_URL}/?to=${guest.slug}`
@@ -48,7 +48,7 @@ console.log("")
 
 const exampleGuest = guestList[0]
 const exampleLink = `${BASE_URL}/?to=${exampleGuest.slug}`
-const exampleSession = exampleGuest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 15.00 WIB"
+const exampleSession = exampleGuest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 14.00 WIB"
 
 console.log(`Assalamualaikum ${exampleGuest.name},
 
@@ -76,7 +76,7 @@ console.log("-".repeat(80))
 console.log("Nama,Slug,Sesi,Jam,Link")
 guestList.forEach(guest => {
   const link = `${BASE_URL}/?to=${guest.slug}`
-  const jam = guest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 15.00 WIB"
+  const jam = guest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 14.00 WIB"
   console.log(`"${guest.name}","${guest.slug}",${guest.session},"${jam}","${link}"`)
 })
 

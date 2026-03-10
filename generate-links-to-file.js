@@ -30,7 +30,7 @@ session1.forEach((guest, index) => {
 })
 
 txtContent += "\n"
-txtContent += "SESI 2 (12.00 - 15.00 WIB):\n"
+txtContent += "SESI 2 (12.00 - 14.00 WIB):\n"
 txtContent += "-".repeat(80) + "\n"
 session2.forEach((guest, index) => {
   const link = `${BASE_URL}/?to=${guest.slug}`
@@ -67,7 +67,7 @@ let csvContent = "No,Nama,Slug,Sesi,Jam,Link\n"
 
 guestList.forEach((guest, index) => {
   const link = `${BASE_URL}/?to=${guest.slug}`
-  const jam = guest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 15.00 WIB"
+  const jam = guest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 14.00 WIB"
   csvContent += `${index + 1},"${guest.name}","${guest.slug}",${guest.session},"${jam}","${link}"\n`
 })
 
@@ -82,7 +82,7 @@ waContent += "=".repeat(80) + "\n\n"
 
 guestList.forEach((guest, index) => {
   const link = `${BASE_URL}/?to=${guest.slug}`
-  const jam = guest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 15.00 WIB"
+  const jam = guest.session === 1 ? "09.00 - 11.00 WIB" : "12.00 - 14.00 WIB"
   
   waContent += `${index + 1}. ${guest.name}\n`
   waContent += "-".repeat(80) + "\n"
