@@ -20,7 +20,7 @@ export const weddingData = {
     },
     resepsi: {
       date: "Sabtu, 25 April 2026",
-      time: "Setelah Akad Nikah - 15:00 WIB",
+      time: "Setelah Akad Nikah - 14:00 WIB",
       venue: "Saung Kita Cikupa Pandeglang",
       venueType: "Resto & Kafe",
       address: "Jl. Jend. Sudirman Komp. Perkantoran Cikupa, Pandeglang, Kec. Pandeglang, Kabupaten Pandeglang, Banten 42211",

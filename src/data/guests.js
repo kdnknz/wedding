@@ -2,7 +2,7 @@
 // Format: { name: "Nama Tamu", slug: "nama-tamu", session: 1 atau 2 }
 // Link akan menjadi: https://aditya-adinda.vercel.app/?to=nama-tamu
 // Session 1: 09:00 - 11:00 WIB
-// Session 2: 12:00 - 15:00 WIB
+// Session 2: 12:00 - 14:00 WIB
 
 export const guestList = [
 {name: 'Keluarga Bpk. Hadi Mulyadi', slug:'keluarga-hadi-mulyadi', session:2},
