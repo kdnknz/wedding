@@ -31,7 +31,7 @@ export const weddingData = {
       2: "Pukul 12.00 - 14.00 WIB"
     }
   },
-  countdownDate: "2026-04-24T09:00:00",
+  countdownDate: "2026-04-25T09:00:00",
   quote: "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya.",
   quoteSource: "QS. Ar-Rum: 21",
   musicPath: "/audio/background.mp3",
