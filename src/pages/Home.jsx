@@ -31,7 +31,7 @@ function Home({ onOpen }) {
           </div>
         )}
         
-        <p className="event-text-sopan">Mohon maaf apabila terdapat kesalahan dalam penulisan nama maupun gelar.</p>
+        <p className="event-text-sopan">Mohon maaf jika terdapat kesalahan penulisan nama atau gelar.</p>
         <button className="open-button" onClick={onOpen}>
           Buka Undangan
         </button>
