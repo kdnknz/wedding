@@ -167,6 +167,15 @@ body {
   animation: fadeInUp 1s ease-out 1s both;
 }
 
+.event-text-sopan {
+  font-size: 0.9rem; 
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #214577;
+  opacity: 0.8;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
 .open-button {
   background: linear-gradient(135deg, #7B9FE8 0%, #0d1e3c 100%);
   color: white;
