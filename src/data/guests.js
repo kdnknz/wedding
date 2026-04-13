@@ -94,10 +94,10 @@ export const guestList = [
 {name: 'Dilla Nurkholisoh', slug:'dilla-nurkholisoh', session:1},
 {name: 'Leli Kurniati', slug:'leli-kurniati', session:1},
 {name: 'Sukmiati', slug:'sukmiati', session:1},
-{name: 'Ibu Farida dan Suami', slug:'', session:2},
-{name: 'Bpk. Anton Setiyawan', slug:'', session:2},
-{name: 'Bpk. Luthfy Burhanuddin', slug:'', session:2},
-{name: 'Rekan-rekan PCI Quality', slug:'', session:2},
+{name: 'Ibu Farida dan Suami', slug:'ibu-farida', session:2},
+{name: 'Bpk. Anton Setiyawan', slug:'bpk-anton-s', session:2},
+{name: 'Bpk. Luthfy Burhanuddin', slug:'bpk-lutfy-b', session:2},
+{name: 'Rekan- rekan PCI Quality', slug:'rekan-pci', session:2},
 ]
 
 // Fungsi untuk generate link undangan
