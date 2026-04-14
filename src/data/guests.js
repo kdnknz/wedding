@@ -98,6 +98,7 @@ export const guestList = [
 {name: 'Bpk. Anton Setiyawan', slug:'bpk-anton-s', session:2},
 {name: 'Bpk. Luthfy Burhanuddin', slug:'bpk-lutfy-b', session:2},
 {name: 'Rekan- rekan PCI Quality', slug:'rekan-pci', session:2},
+{name: 'Widia', slug:'widia', session:1},
 ]
 
 // Fungsi untuk generate link undangan
