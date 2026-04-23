@@ -107,7 +107,7 @@ export const guestList = [
 {name: 'Ibu Wahyu Widayanti dan Keluarga', slug:'wwidyanti', session:2},
 {name: 'Maritzs Tsa Rachmayanti', slug:'maritzs', session:2},
 {name: 'Ibu Fitria Anugraheni', slug:'fitria-anugra', session:2},
-{name: 'Bapak Ariesta dan Keluarga', slug:'keluarga-ariesta', session:1}
+{name: 'Bpk. Irfan Ariesta dan Keluarga', slug:'keluarga-irfan-ariesta', session:1}
 ]
 
 // Fungsi untuk generate link undangan
